@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {Card, CardGroup} from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import './App.css';
 
 function App() {
