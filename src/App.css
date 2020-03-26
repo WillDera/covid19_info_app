@@ -1,5 +1,6 @@
 .App {
 	text-align: center;
+	margin: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -19,14 +20,14 @@
   color: white;
 } */
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
 	from {
 		transform: rotate(0deg);
 	}
 	to {
 		transform: rotate(360deg);
 	}
-}
+} */
 
 @media (min-width: 320px) {
 	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
@@ -104,20 +105,20 @@
 
 	.confirmed {
 		border-radius: 13px 13px;
-		margin: 10px;
+		margin: 3px;
     padding: 0;
     position: relative;
 	}
 	.recovered {
 		border-radius: 13px 13px;
-		margin: 10px;
+		margin: 3px;
     padding: 0;
     position: relative;
 	}
 	.death {
     position: relative;
 		border-radius: 13px 13px;
-		margin: 10px;
+		margin: 3px;
 		padding: 0;
 	}
 
@@ -159,17 +160,17 @@
 
 	.confirmed {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 	.recovered {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 	.death {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 
@@ -211,17 +212,17 @@
 
 	.confirmed {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 	.recovered {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 	.death {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 
@@ -263,17 +264,17 @@
 
 	.confirmed {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 	.recovered {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 	.death {
 		border-radius: 13px 13px;
-		margin: 0;
+		margin: 3px;
 		padding: 0;
 	}
 
@@ -294,7 +295,7 @@
 	}
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
 	.death {
 		height: 30px;
 	}
@@ -304,7 +305,7 @@
 	.death {
 		height: 30%;
 	}
-}
+} */
 
 
 .countryData {
