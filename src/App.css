@@ -311,8 +311,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-span {
+.countryConfirmed {
+	float: left;
+	width: 100px;
+}
+
+.countryRecovered {
+	float: right;
+	width: 100px;
+}
+
+.countryDeath {
+	margin: 0 auto; 
+	width: 100px;
+}
+
+.countryData div {
 	display: inline-block;
+}
+
+.countryConfirmed span {
+	display: block;
+}
+
+.countryDeath span {
+	display: block;
+}
+.countryRecovered span {
+	display: block;
 }
