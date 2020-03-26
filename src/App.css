@@ -1,11 +1,11 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 /* .App-header {
@@ -20,46 +20,299 @@
 } */
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
-.world {
-  border-radius: 13px 13px;
-  margin: auto;
-  padding: 50px;
-  background: #ccc;
-  display: block;
+@media (min-width: 320px) {
+	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+	.world {
+		border-radius: 13px 13px;
+		margin: auto;
+		padding: 50px;
+		background: #ccc;
+		display: block;
+	}
+
+	.wCase {
+		margin: 10px;
+		padding: auto;
+	}
+
+	.wChart {
+		margin: 20px;
+		padding: auto;
+	}
+
+	.confirmed {
+		border-radius: 13px 13px;
+		margin: 3px;
+		padding: 0;
+	}
+	.recovered {
+		border-radius: 13px 13px;
+		margin: 3px;
+		padding: 0;
+	}
+	.death {
+		border-radius: 13px 13px;
+		margin: 3px;
+		padding: 0;
+	}
+
+	.country {
+		border-radius: 20px 20px;
+		margin: 20px;
+		padding: 0;
+		box-shadow: 5px 8px #ccc;
+	}
+
+	.chart {
+		text-align: center;
+		height: 250px;
+		width: 250px;
+		background-color: #bbb;
+		border-radius: 50%;
+		float: right;
+	}
 }
 
-.confirmed, .recovered, .death {
-  border-radius: 13px 13px;
-  margin: 0;
-  padding: 0;
+@media (min-width: 640px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .world {
+		border-radius: 13px 13px;
+		margin: auto;
+		padding: 50px;
+		background: #ccc;
+		display: block;
+	}
+
+	.wCase {
+		position:relative;
+    margin: 10px;
+    height:400px;
+	}
+
+	.wChart { 
+    position: relative;
+    margin: 10px;
+	}
+
+	.confirmed {
+		border-radius: 13px 13px;
+		margin: 10px;
+    padding: 0;
+    position: relative;
+	}
+	.recovered {
+		border-radius: 13px 13px;
+		margin: 10px;
+    padding: 0;
+    position: relative;
+	}
+	.death {
+    position: relative;
+		border-radius: 13px 13px;
+		margin: 10px;
+		padding: 0;
+	}
+
+	.country {
+		border-radius: 20px 20px;
+		margin: 20px;
+		padding: 0;
+		box-shadow: 5px 8px #ccc;
+	}
+
+	.chart {
+		text-align: center;
+		height: 250px;
+		width: 250px;
+		background-color: #bbb;
+		border-radius: 50%;
+		float: right;
+	}
+}
+@media (min-width: 641px) {
+	/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+	.world {
+		border-radius: 13px 13px;
+		margin: auto;
+		padding: 50px;
+		background: #ccc;
+		display: flex;
+	}
+
+	.wCase {
+		margin: auto;
+		padding: auto;
+	}
+
+	.wChart {
+		margin: auto;
+		padding: auto;
+	}
+
+	.confirmed {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+	.recovered {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+	.death {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.country {
+		border-radius: 20px 20px;
+		margin: 20px;
+		padding: 0;
+		box-shadow: 5px 8px #ccc;
+	}
+
+	.chart {
+		text-align: center;
+		height: 250px;
+		width: 250px;
+		background-color: #bbb;
+		border-radius: 50%;
+		float: right;
+	}
+}
+@media (min-width: 961px) {
+	/* tablet, landscape iPad, lo-res laptops ands desktops */
+	.world {
+		border-radius: 13px 13px;
+		margin: auto;
+		padding: 50px;
+		background: #ccc;
+		display: flex;
+	}
+
+	.wCase {
+		margin: auto;
+		padding: auto;
+	}
+
+	.wChart {
+		margin: auto;
+		padding: auto;
+	}
+
+	.confirmed {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+	.recovered {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+	.death {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.country {
+		border-radius: 20px 20px;
+		margin: 20px;
+		padding: 0;
+		box-shadow: 5px 8px #ccc;
+	}
+
+	.chart {
+		text-align: center;
+		height: 250px;
+		width: 250px;
+		background-color: #bbb;
+		border-radius: 50%;
+		float: right;
+	}
 }
 
-.country {
-  border-radius: 20px 20px;
-  margin: 20px;
-  padding: 0;
-  box-shadow: 5px 8px #ccc;
-}
+@media (min-width: 1025px) {
+	.world {
+		border-radius: 13px 13px;
+		margin: auto;
+		padding: 50px;
+		background: #ccc;
+		display: flex;
+	}
 
-.chart {
-  text-align: center;
-  height: 250px;
-  width: 250px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
+	.wCase {
+		margin: auto;
+		padding: auto;
+	}
+
+	.wChart {
+		margin: auto;
+		padding: auto;
+	}
+
+	.confirmed {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+	.recovered {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+	.death {
+		border-radius: 13px 13px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.country {
+		border-radius: 20px 20px;
+		margin: 20px;
+		padding: 0;
+		box-shadow: 5px 8px #ccc;
+	}
+
+	.chart {
+		text-align: center;
+		height: 250px;
+		width: 250px;
+		background-color: #bbb;
+		border-radius: 50%;
+		float: right;
+	}
 }
 
 @media only screen and (max-width: 600px) {
-  .confirmed, .recovered, .death {
+	.death {
+		height: 30px;
+	}
+	.recovered {
+		height: 30;
+	}
+	.death {
+		height: 30%;
+	}
+}
 
-  }
+
+.countryData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+	display: inline-block;
 }
