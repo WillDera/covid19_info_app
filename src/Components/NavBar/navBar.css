@@ -1,0 +1,17 @@
+.navBar {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.navContainer {
+    display: flex;
+}
+
+.navItem {
+    margin: 0 auto; 
+    width: 100px;
+    display: inline;
+}

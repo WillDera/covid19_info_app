@@ -3,13 +3,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Card } from "react-bootstrap";
-import NavBar from "./Components/NavBar";
+import NavBar from "./Components/NavBar/NavBar";
 import "./App.css";
 
 function App() {
 	return (
 		<div className="App">
-			<NavBar fixed="bottom" />
 			<Container>
 				<div className="world">
 					<div className="wCase">
@@ -67,6 +66,7 @@ function App() {
 					</Card.Body>
 				</Card>
 			</Container>
+			<NavBar />
 		</div>
 	);
 }
