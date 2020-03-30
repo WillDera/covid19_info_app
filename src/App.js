@@ -11,7 +11,7 @@ function App() {
 		<div className="App">
 			<Container>
 				<div className="world">
-					<div className="wCase" col-6>
+					<div className="wCase">
 						<Row>
 							<Col>
 								<Card className="confirmed">
@@ -39,31 +39,31 @@ function App() {
 							</Card.Body>
 						</Card>
 					</div>
-					<div className="wChart chart" col-6>
+					<div className="wChart col-6">
 						
 					</div>
 				</div>
 
-				{/* <Card className="country">
+				<Card className="country">
 					<Card.Body>
-						<Card.Title>{"COUNTRY"}</Card.Title>
-	<Card.Title style={{fontSize: "12px", fontWeight:"normal"}}>{"Last updated: Time"}</Card.Title>
+						<Card.Title style={{color: "#fff"}}>{"Nigeria"}</Card.Title>
+	<Card.Title style={{fontSize: "12px", fontWeight:"normal", color: "#fff"}}>{"Last updated: Time"}</Card.Title>
 						<Card.Text className="countryData">
 							<div className="countryConfirmed">
-								<span>45</span>
+								<span style={{fontSize: "19px"}}>45</span>
 								<span className="handlerC">Confirmed</span>
 							</div>
 							<div className="countryDeath">
-								<span>1</span>
+								<span style={{fontSize: "19px"}}>1</span>
 								<span className="handlerD">Death</span>
 							</div>
 							<div className="countryRecovered">
-								<span>2</span>
+								<span style={{fontSize: "19px"}}>2</span>
 								<span className="handlerR">Recovered</span>
 							</div>
 						</Card.Text>
 					</Card.Body>
-				</Card> */}
+				</Card>
 				<NavBar />
 			</Container>
 		</div>

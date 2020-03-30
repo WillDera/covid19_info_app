@@ -1,6 +1,5 @@
 .App {
 	text-align: center;
-	margin: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,55 +31,116 @@
 @media (min-width: 320px) {
 	/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 	.world {
-		border-radius: 13px 13px;
-		margin: auto;
-		padding: 10px;
-		background: #ccc;
+		border-radius: 8px 8px;
+		margin: 20px 2px 2px 2px;
+		height: 300px;
+		padding: 15px;
+		background-color: rgb(58, 63, 68);
 		display: block;
 	}
 
 	.wCase {
-		padding: auto;
+		float: left;
 	}
 
 	.wChart {
-		height: 250px;
-		width: 250px;
-		background-color: #bbb;
-		border-radius: 50%;
-		float: right;
+		width: 300px;
+		border-radius: 100%;
+		height: 200px;
+		background: black;
+		top: 10%;
+		right: -45%;
 	}
 
 	.confirmed {
-		border-radius: 13px 13px;
+		border-radius: 10px 10px;
 		width: 100px;
 		height: 85px;
 		margin: 3px;
 		padding: 0;
+		color: #fff;
+		background-color: #000;
 	}
 	.recovered {
-		border-radius: 13px 13px;
+		border-radius: 10px 10px;
 		width: 100px;
 		height: 85px;
 		margin: 3px;
 		padding: 0;
+		color: #fff;
+		background-color: #000;
 	}
 	.death {
-		border-radius: 13px 13px;
+		border-radius: 10px 10px;
 		width: 100px;
 		height: 85px;
 		margin: 3px;
 		padding: 0;
+		color: #fff;
+		background-color: #000;
 	}
 
 	.country {
-		border-radius: 20px 20px;
-		margin: 20px;
+		border-radius: 8px 8px;
+		margin: 30px 8px 8px 8px;
 		padding: 0;
 		margin-bottom: 100px;
+		background-color: rgb(58, 63, 68);
 	}
 
-	.chart {
+	.countryData {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+	
+	.countryConfirmed {
+		float: left;
+		width: 100px;
+	}
+	
+	.countryRecovered {
+		float: right;
+		width: 100px;
+	}
+	
+	.countryDeath {
+		margin: 0 auto;
+		width: 100px;
+	}
+	
+	.countryData div {
+		display: inline-block;
+	}
+	
+	.countryConfirmed span {
+		display: block;
+		font-size: 12px;
+		font-weight: bold;
+		color: rgb(233, 167, 25);
+	}
+	
+	.countryDeath span {
+		display: block;
+		font-size: 12px;
+		font-weight: bold;
+		color: rgb(226, 11, 11);;
+	}
+	.countryRecovered span {
+		display: block;
+		font-size: 12px;
+		font-weight: bold;
+		color: rgb(51, 223, 17);
+	}
+
+	.handlerC {
+		
+	}
+	.handlerD {
+		
+	}
+	.handlerR {
 		
 	}
 }
@@ -310,49 +370,4 @@
 	}
 } */
 
-.countryData {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
 
-.countryConfirmed {
-	float: left;
-	width: 100px;
-}
-
-.countryRecovered {
-	float: right;
-	width: 100px;
-}
-
-.countryDeath {
-	margin: 0 auto;
-	width: 100px;
-}
-
-.countryData div {
-	display: inline-block;
-}
-
-.countryConfirmed span {
-	display: block;
-}
-
-.countryDeath span {
-	display: block;
-}
-.countryRecovered span {
-	display: block;
-}
-
-.handlerC {
-	font: 12px bold rgb(233, 167, 25);
-}
-.handlerD {
-	font: 12px bold rgb(226, 11, 11);
-}
-.handlerR {
-	font: 12px bold rgb(51, 223, 17);
-}
