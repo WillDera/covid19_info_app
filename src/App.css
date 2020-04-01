@@ -17,3 +17,9 @@
 .card {
 	background-color: rgb(128, 126, 126);
 }
+
+.country {
+	background-color: rgb(204, 202, 202);
+	border-radius: 5px;
+	padding: 20px;
+}

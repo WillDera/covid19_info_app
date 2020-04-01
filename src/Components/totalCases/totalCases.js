@@ -10,10 +10,11 @@ class ConfirmedCount extends React.Component {
 			<Card
 				className="card"
 				border="danger"
-				style={{ width: "18rem", height: "6rem" }}
+				style={{ width: "18rem" }}
 			>
-				<Card.Text style={{ fontSize: "25px", fontWeight: "600" }}>
+				<Card.Text style={{ fontSize: "15px", fontWeight: "600", margin: "0", padding: "0" }}>
 					<CountUp start={0} end={this.props.number} duration={8} />
+					<br style={{border: "5px solid black", height: "20px"}}/>
 				</Card.Text>
 				<Card.Title style={{ fontWeight: "500", color: "#ffb85c" }}>
 					Confirmed Cases

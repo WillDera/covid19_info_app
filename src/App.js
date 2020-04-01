@@ -9,7 +9,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 import DeathCount from "./Components/deaths";
 import RecoveredCount from "./Components/recovered";
-import ConfirmedCount from "./Components/totalCases";
+import ConfirmedCount from "./Components/totalCases/totalCases";
+import CountryData from "./Components/country/countryData";
 import "./App.css";
 
 class App extends React.Component {
@@ -67,6 +68,7 @@ class App extends React.Component {
 				</div>
 				<div className="country">
 					<DropD countries={this.renderCountryOptions()} />
+					<CountryData />
 				</div>
 			</div>
 		);

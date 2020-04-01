@@ -5,7 +5,12 @@ class Chart extends React.Component {
 	render() {
 		return (
 			<div className="chart">
-				{this.props.confirmed}
+				<div className="lineGraph">
+					{"There'd be a line Graph Here"}
+				</div>
+				<div className="pieChart">
+					{"There'd be a pie Chart Here"}
+				</div>
 			</div>
 		)
 	}
