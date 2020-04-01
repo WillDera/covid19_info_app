@@ -1,11 +1,13 @@
 import React from "react";
 import "./chart.css";
 
-function Chart() {
-	return (
-		<div className="chart">
-			
-		</div>
-	);
+class Chart extends React.Component {
+	render() {
+		return (
+			<div className="chart">
+				{this.props.confirmed}
+			</div>
+		)
+	}
 }
 export default Chart;

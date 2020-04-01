@@ -1,26 +1,26 @@
+import React from "react";
+import CountUp from "react-countup";
+import { Card } from "react-bootstrap";
 
-import React, { Component } from "react";
-import Axios from "axios";
+class ConfirmedCount extends React.Component {
 
+	render() {
 
-export default class totalCases extends Component {
-    constructor(props) {
-        super(props);
-    
-        this.getData = this.getData.bind(this);
-      }
-
-      state = {
-        death: "loading..."
-      };
-
-      componentDidMount() {
-          this.getData();
-      }
-
-    render() {
-        return (
-            
-        );
-    }
+		return (
+			<Card
+				className="card"
+				border="danger"
+				style={{ width: "18rem", height: "6rem" }}
+			>
+				<Card.Text style={{ fontSize: "25px", fontWeight: "600" }}>
+					<CountUp start={0} end={this.props.number} duration={8} />
+				</Card.Text>
+				<Card.Title style={{ fontWeight: "500", color: "#ffb85c" }}>
+					Confirmed Cases
+				</Card.Title>
+			</Card>
+		);
+	}
 }
+
+export default ConfirmedCount;

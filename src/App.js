@@ -1,18 +1,27 @@
 import React from "react";
-import CardDeck from "react-bootstrap/CardDeck";
 import Axios from "axios";
-import { Card } from "react-bootstrap";
+
 import Chart from "./Components/chart/chart";
-import DropD from "./Components/Dropdown";
+import DropD from "./Components/dropdown/Dropdown";
+
+import CardDeck from "react-bootstrap/CardDeck";
+import Dropdown from "react-bootstrap/Dropdown";
+
+import DeathCount from "./Components/deaths";
+import RecoveredCount from "./Components/recovered";
+import ConfirmedCount from "./Components/totalCases";
 import "./App.css";
 
 class App extends React.Component {
-	state = {
-		confirmed: 0,
-		deaths: 0,
-		recovered: 0,
-		countries: []
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			confirmed: 0,
+			deaths: 0,
+			recovered: 0,
+			countries: []
+		};
+	}
 
 	componentDidMount() {
 		this.getData();
@@ -34,55 +43,30 @@ class App extends React.Component {
 
 	renderCountryOptions() {
 		return this.state.countries.map((country, i) => {
-			return <option key={i}>{country.name}</option>;
+			return <Dropdown.Item key={i}>{country.name}</Dropdown.Item>;
 		});
 	}
 
 	render() {
-		return (
-			<div className="App">
-				<div className="row">
-					<CardDeck className="appHolder">
-						<Card
-							className="card"
-							border="warning"
-							style={{ width: "18rem", height: "6rem" }}
-						>
-							<Card.Text style={{ fontSize: "25px", fontWeight: "600" }}>
-								{3333 * 10000}
-							</Card.Text>
-							<Card.Title style={{ fontWeight: "400", color: "#FFA500" }}>
-								Confirmed Cases
-							</Card.Title>
-						</Card>
-						<Card
-							className="card"
-							border="danger"
-							style={{ width: "18rem", height: "6rem" }}
-						>
-							<Card.Text style={{ fontSize: "25px", fontWeight: "600" }}>
-								{3333 * 10000}
-							</Card.Text>
-							<Card.Title style={{ fontWeight: "500", color: "#FF0000" }}>
-								Death Cases
-							</Card.Title>
-						</Card>
-						<Card
-							className="card"
-							border="success"
-							style={{ width: "18rem", height: "6rem" }}
-						>
-							<Card.Text style={{ fontSize: "25px", fontWeight: "600" }}>
-								{3333 * 10000}
-							</Card.Text>
-							<Card.Title style={{ fontWeight: "400", color: "#66FF66" }}>
-								Recovered Cases
-							</Card.Title>
-						</Card>
-						<select>{this.renderCountryOptions()}</select>
-					</CardDeck>
-					<Chart />
+		const deaths = this.state.deaths;
+		const confirmed = this.state.confirmed;
+		const recovered = this.state.recovered;
 
+		console.log(this.state.deaths);
+		return (
+			<div>
+				<div className="App appHolder row">
+					<CardDeck>
+						<ConfirmedCount number={confirmed} />
+						<DeathCount number={deaths} />
+						<RecoveredCount number={recovered} />
+					</CardDeck>
+				</div>
+				<div className="charts">
+					<Chart confirmed={confirmed} death={deaths} recovered={recovered} />
+				</div>
+				<div className="country">
+					<DropD countries={this.renderCountryOptions()} />
 				</div>
 			</div>
 		);
