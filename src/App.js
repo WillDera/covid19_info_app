@@ -11,7 +11,7 @@ import DeathCount from "./Components/deaths";
 import RecoveredCount from "./Components/recovered";
 import ConfirmedCount from "./Components/totalCases/totalCases";
 import CountryData from "./Components/country/countryData";
-import "./App.css";
+import "./main.css";
 
 class App extends React.Component {
 	constructor(props) {
@@ -55,20 +55,65 @@ class App extends React.Component {
 
 		console.log(this.state.deaths);
 		return (
-			<div>
-				<div className="App appHolder row">
-					<CardDeck>
+			<div className="app" style={{margin: "0", padding: "10px", width: "100%"}}>
+				<div className="row">
+					<div className="col-md-6 col-xl-4">
 						<ConfirmedCount number={confirmed} />
+					</div>
+					<div className="col-md-6 col-xl-4">
 						<DeathCount number={deaths} />
+					</div>
+					<div className="col-md-6 col-xl-4">
 						<RecoveredCount number={recovered} />
-					</CardDeck>
+					</div>
 				</div>
-				<div className="charts">
-					<Chart confirmed={confirmed} death={deaths} recovered={recovered} />
+				<div style={{margin: "0", padding: "10px", width: "100%"}}>
+					<div className="row" >
+						<div className="col-md-12 col-lg-6">
+							<div className="mb-3 card">
+								<div className="card-header-tab card-header-tab-animation card-header">
+									<div className="card-header-title">
+										World Wide Report Visualization
+									</div>
+								</div>
+								<div className="card-body">
+									<div className="tab-content">
+										<div className="tab-pane fade show active" id="tabs-eg-77">
+											<Chart />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-12 col-lg-6">
+						<div className="mb-3 card">
+							<div className="card-header-tab card-header-tab-animation card-header">
+								<div className="card-header-title">
+									{"country "}
+									Report Visualization{" "}
+								</div>
+							</div>
+							<div className="card-body">
+								<div className="tab-content">
+									<div className="tab-pane fade show active" id="tabs-eg-77">
+										<Chart />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
 				</div>
-				<div className="country">
-					<DropD countries={this.renderCountryOptions()} />
-					<CountryData />
+				<div className="row">
+					<div className="col-md-6 col-xl-4">
+						<ConfirmedCount number={confirmed} />
+					</div>
+					<div className="col-md-6 col-xl-4">
+						<DeathCount number={deaths} />
+					</div>
+					<div className="col-md-6 col-xl-4">
+						<RecoveredCount number={recovered} />
+					</div>
 				</div>
 			</div>
 		);

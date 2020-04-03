@@ -1,0 +1,15 @@
+{/* // 	<div className="App appHolder row">
+			// 		<CardDeck>
+
+			//
+			// 		</CardDeck>
+			// 	</div>
+			// 	<div className="charts">
+			// 		<Chart confirmed={confirmed} death={deaths} recovered={recovered} />
+			// 	</div>
+			// 	<div className="country">
+			// 		<br />
+			// 		<DropD countries={this.renderCountryOptions()} />
+			// 		<CountryData />
+			// 	</div>
+			// </div> */}
