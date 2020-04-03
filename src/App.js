@@ -4,13 +4,11 @@ import Axios from "axios";
 import Chart from "./Components/chart/chart";
 import DropD from "./Components/dropdown/Dropdown";
 
-import CardDeck from "react-bootstrap/CardDeck";
 import Dropdown from "react-bootstrap/Dropdown";
 
 import DeathCount from "./Components/deaths";
 import RecoveredCount from "./Components/recovered";
 import ConfirmedCount from "./Components/totalCases/totalCases";
-import CountryData from "./Components/country/countryData";
 import "./main.css";
 
 class App extends React.Component {
@@ -33,7 +31,8 @@ class App extends React.Component {
 		const resCountries = await Axios.get(
 			"https://covid19.mathdro.id/api/countries"
 		);
-		const countries = Object.keys(resCountries.data.countries);
+		// const countries = Object.keys(resCountries.data.countries);
+		console.log(resCountries.data.countries);
 		this.setState({
 			confirmed: resApi.data.confirmed.value,
 			deaths: resApi.data.deaths.value,
@@ -53,10 +52,9 @@ class App extends React.Component {
 		const confirmed = this.state.confirmed;
 		const recovered = this.state.recovered;
 
-		console.log(this.state.deaths);
 		return (
-			<div className="app" style={{margin: "0", padding: "10px", width: "100%"}}>
-				<div className="row">
+			<div className="app">
+				<div className="row" style={{ margin: "10px" }}>
 					<div className="col-md-6 col-xl-4">
 						<ConfirmedCount number={confirmed} />
 					</div>
@@ -67,8 +65,8 @@ class App extends React.Component {
 						<RecoveredCount number={recovered} />
 					</div>
 				</div>
-				<div style={{margin: "0", padding: "10px", width: "100%"}}>
-					<div className="row" >
+				<div style={{ margin: "10px" }}>
+					<div className="row">
 						<div className="col-md-12 col-lg-6">
 							<div className="mb-3 card">
 								<div className="card-header-tab card-header-tab-animation card-header">
@@ -86,33 +84,61 @@ class App extends React.Component {
 							</div>
 						</div>
 						<div className="col-md-12 col-lg-6">
-						<div className="mb-3 card">
-							<div className="card-header-tab card-header-tab-animation card-header">
-								<div className="card-header-title">
-									{"country "}
-									Report Visualization{" "}
+							<div className="mb-3 card">
+								<div className="card-header-tab card-header-tab-animation card-header">
+									<div className="card-header-title">
+										{"country "}
+										Report Visualization{" "}
+									</div>
 								</div>
-							</div>
-							<div className="card-body">
-								<div className="tab-content">
-									<div className="tab-pane fade show active" id="tabs-eg-77">
-										<Chart />
+								<div className="card-body">
+									<div className="tab-content">
+										<div className="tab-pane fade show active" id="tabs-eg-77">
+											<Chart />
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					</div>
 				</div>
-				<div className="row">
-					<div className="col-md-6 col-xl-4">
-						<ConfirmedCount number={confirmed} />
+				<div
+					className="countrySec"
+					style={{
+						borderRadius: "5px",
+						margin: "50px",
+						padding: "10px 3px 0px 3px",
+						backgroundColor: "#DCDCDC"
+					}}
+				>
+					<div
+						className="row"
+						style={{ justifyContent: "center", display: "flex" }}
+					>
+						<DropD countries={this.renderCountryOptions()} />
 					</div>
-					<div className="col-md-6 col-xl-4">
-						<DeathCount number={deaths} />
-					</div>
-					<div className="col-md-6 col-xl-4">
-						<RecoveredCount number={recovered} />
+					<div>
+						<div
+							style={{
+								justifyContent: "center",
+								display: "flex",
+								marginTop: "10px",
+								fontFamily: "Lobster"
+							}}
+						>
+							<h1>{"Country"}</h1>
+						</div>
+						<div className="row" style={{ margin: "10px" }}>
+							<div className="col-md-6 col-xl-4">
+								<ConfirmedCount number={confirmed} />
+							</div>
+							<div className="col-md-6 col-xl-4">
+								<DeathCount number={deaths} />
+							</div>
+							<div className="col-md-6 col-xl-4">
+								<RecoveredCount number={recovered} />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

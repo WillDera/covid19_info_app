@@ -1,8 +1,7 @@
 import React from "react";
 import CountUp from "react-countup";
-import { Card } from "react-bootstrap";
 
-class RecoverdCount extends React.Component {
+class RecoveredCount extends React.Component {
 	render() {
 		return (
 			<div class="card mb-3 widget-content">
@@ -29,4 +28,4 @@ class RecoverdCount extends React.Component {
 	}
 }
 
-export default RecoverdCount;
+export default RecoveredCount;

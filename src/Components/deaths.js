@@ -1,6 +1,5 @@
 import React from "react";
 import CountUp from "react-countup";
-import { Card } from "react-bootstrap";
 
 class DeathCount extends React.Component {
 
