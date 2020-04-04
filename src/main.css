@@ -9133,8 +9133,6 @@ button,
 	span::before {
 	background: rgba(255, 255, 255, 0.8);
 }
-.app-header.header-text-light .app-header__logo .logo-src {
-}
 .app-header.header-text-light .app-header__mobile-menu .hamburger-inner,
 .app-header.header-text-light .app-header__mobile-menu .hamburger-inner::before,
 .app-header.header-text-light .app-header__mobile-menu .hamburger-inner::after {
@@ -9484,8 +9482,6 @@ button,
 }
 .app-sidebar.sidebar-text-light .ps__rail-y:hover .ps__thumb-y {
 	background: rgba(255, 255, 255, 0.2);
-}
-.app-sidebar.sidebar-text-light .app-header__logo .logo-src {
 }
 .app-sidebar.sidebar-text-light .app-header__logo .hamburger-inner,
 .app-sidebar.sidebar-text-light .app-header__logo .hamburger-inner::before,
@@ -10168,9 +10164,7 @@ button,
 }
 .icon-gradient {
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	text-fill-color: transparent;
 }
 .font-size-xlg {
 	font-size: 1.3rem !important;
@@ -10488,6 +10482,7 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
 body {
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 }
 .animated {

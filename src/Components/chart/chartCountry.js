@@ -3,18 +3,18 @@ import { Pie } from "react-chartjs-2";
 
 
 
-export default class Chart extends Component {
+export default class CountryChart extends Component {
 	
 	render() {
-		const deaths = this.props.death;
-		const recovered = this.props.recover;
-		const confirmed = this.props.confirm;
+		// const deaths = this.props.death;
+		// const recovered = this.props.recover;
+		// const confirmed = this.props.confirm;
 		const data = {
 			labels: ["Deaths", "Recovered", "Confirmed"],
 			datasets: [
 				{
 					data: [
-						deaths, recovered, confirmed
+						4, 25, 210
 					],
 					backgroundColor: ["#FF6384", "#66FF66", "#FFCE56"],
 					hoverBackgroundColor: ["#FF0066", "#66FF33", "#FF9900"]

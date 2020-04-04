@@ -2,6 +2,7 @@ import React from "react";
 import Axios from "axios";
 
 import Chart from "./Components/chart/chart";
+import CountryChart from "./Components/chart/chartCountry";
 import DropD from "./Components/dropdown/Dropdown";
 
 import Dropdown from "react-bootstrap/Dropdown";
@@ -32,7 +33,7 @@ class App extends React.Component {
 			"https://covid19.mathdro.id/api/countries"
 		);
 		// const countries = Object.keys(resCountries.data.countries);
-		console.log(resCountries.data.countries);
+		// console.log(resCountries.data.countries);
 		this.setState({
 			confirmed: resApi.data.confirmed.value,
 			deaths: resApi.data.deaths.value,
@@ -40,6 +41,7 @@ class App extends React.Component {
 			countries: resCountries.data.countries
 		});
 	}
+
 
 	renderCountryOptions() {
 		return this.state.countries.map((country, i) => {
@@ -52,24 +54,49 @@ class App extends React.Component {
 		const confirmed = this.state.confirmed;
 		const recovered = this.state.recovered;
 
+		const Cdeaths = this.state.deaths;
+
 		return (
 			<div className="app">
-				<div className="row" style={{ margin: "10px" }}>
-					<div className="col-md-6 col-xl-4">
-						<ConfirmedCount number={confirmed} />
+				<div
+					className="WorldSec"
+					style={{
+						borderRadius: "5px",
+						margin: "5px",
+						padding: "10px 3px 0px 3px",
+						backgroundColor: "#DCDCDC"
+					}}
+				>
+					<div
+						style={{
+							justifyContent: "center",
+							display: "flex",
+							marginTop: "10px",
+							fontFamily: "Lobster"
+						}}
+					>
+						<h1>WorldWide</h1>
 					</div>
-					<div className="col-md-6 col-xl-4">
-						<DeathCount number={deaths} />
-					</div>
-					<div className="col-md-6 col-xl-4">
-						<RecoveredCount number={recovered} />
+					<div className="row" style={{ margin: "10px" }}>
+						<div className="col-md-6 col-xl-4">
+							<ConfirmedCount number={confirmed} />
+						</div>
+						<div className="col-md-6 col-xl-4">
+							<DeathCount number={deaths} />
+						</div>
+						<div className="col-md-6 col-xl-4">
+							<RecoveredCount number={recovered} />
+						</div>
 					</div>
 				</div>
 				<div style={{ margin: "10px" }}>
 					<div className="row">
 						<div className="col-md-12 col-lg-6">
-							<div className="mb-3 card">
-								<div className="card-header-tab card-header-tab-animation card-header">
+							<div className="mb-3 card" style={{ backgroundColor: "#DCDCDC" }}>
+								<div
+									className="card-header-tab card-header-tab-animation card-header"
+									style={{ backgroundColor: "#DCDCDC" }}
+								>
 									<div className="card-header-title">
 										World Wide Report Visualization
 									</div>
@@ -77,15 +104,22 @@ class App extends React.Component {
 								<div className="card-body">
 									<div className="tab-content">
 										<div className="tab-pane fade show active" id="tabs-eg-77">
-											<Chart />
+											<Chart
+												death={deaths}
+												confirm={confirmed}
+												recover={recovered}
+											/>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div className="col-md-12 col-lg-6">
-							<div className="mb-3 card">
-								<div className="card-header-tab card-header-tab-animation card-header">
+							<div className="mb-3 card" style={{ backgroundColor: "#DCDCDC" }}>
+								<div
+									className="card-header-tab card-header-tab-animation card-header"
+									style={{ backgroundColor: "#DCDCDC" }}
+								>
 									<div className="card-header-title">
 										{"country "}
 										Report Visualization{" "}
@@ -94,7 +128,7 @@ class App extends React.Component {
 								<div className="card-body">
 									<div className="tab-content">
 										<div className="tab-pane fade show active" id="tabs-eg-77">
-											<Chart />
+											<CountryChart />
 										</div>
 									</div>
 								</div>
@@ -106,7 +140,7 @@ class App extends React.Component {
 					className="countrySec"
 					style={{
 						borderRadius: "5px",
-						margin: "50px",
+						margin: "10px",
 						padding: "10px 3px 0px 3px",
 						backgroundColor: "#DCDCDC"
 					}}
