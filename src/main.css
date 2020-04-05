@@ -26,6 +26,8 @@
 	--dark: #343a40;
 	--focus: #444054;
 	--alternate: #794c8a;
+	--scrollbarBG: #cfd8dc;
+	--thumbBG: #90a4ae;
 	--breakpoint-xs: 0;
 	--breakpoint-sm: 576px;
 	--breakpoint-md: 768px;
@@ -63,12 +65,23 @@ body {
 	color: #495057;
 	text-align: left;
 	background-color: #fff;
+	scrollbar-width: thin;
+	scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-track {
+	background: var(--scrollbarBG);
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--thumbBG);
+	border-radius: 6px;
+	border: 3px solid var(--scrollbarBG);
 }
 
 select {
 	-webkit-appearance: button;
-	-webkit-border-radius: 5px;
-	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 	-webkit-padding-end: 20px;
 	-webkit-padding-start: 2px;
 	-webkit-user-select: none;
@@ -142,7 +155,6 @@ select {
 }
 
 @media (min-width: 576px) {
-
 	.col-sm-1 {
 		flex: 0 0 8.33333%;
 		max-width: 8.33333%;
@@ -193,7 +205,6 @@ select {
 	}
 }
 @media (min-width: 768px) {
-
 	.col-md-1 {
 		flex: 0 0 8.33333%;
 		max-width: 8.33333%;
@@ -244,7 +255,6 @@ select {
 	}
 }
 @media (min-width: 992px) {
-
 	.col-lg-1 {
 		flex: 0 0 8.33333%;
 		max-width: 8.33333%;
@@ -368,7 +378,6 @@ select {
 	border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
-
 .card {
 	margin-bottom: 0.75rem;
 }
@@ -392,7 +401,7 @@ select {
 	border-top-left-radius: 0.25rem;
 	border-top-right-radius: 0.25rem;
 }
- .card-header {
+.card-header {
 	background: rgba(255, 255, 255, 0.1);
 	color: rgba(255, 255, 255, 0.9);
 }
@@ -421,8 +430,6 @@ select {
 	padding-right: 0.625rem;
 	height: 3.5rem;
 }
-
-
 
 .nav .badge {
 	margin-left: 8px;
@@ -488,3 +495,88 @@ select {
 	height: 100%;
 }
 
+body.dark-mode {
+	background-color: #1a1919;
+	color: #999;
+  }
+  
+  .dark-mode .w3-button.w3-white {
+	background-color: #2196f3 !important;
+	border-color: transparent !important;
+	border-radius: 2px;
+  }
+  
+
+  .dark-mode .app {
+	background-color: #232323;
+  }
+  
+  .dark-mode-toggle {
+	position: absolute;
+	right: 16px;
+	top: 20px;
+  }
+  .dark-mode-toggle > button {
+	font-size: 1.2em;
+	background: none;
+	border: none;
+	color: #ffe600;
+	cursor: pointer;
+	transition: color 0.3s ease;
+  }
+  .dark-mode .dark-mode-toggle > button {
+	color: #999;
+  }
+  .dark-mode-toggle > button:last-child {
+	color: #666;
+  }
+  .dark-mode .dark-mode-toggle > button:last-child {
+	color: #ffe600;
+  }
+  /* bab3fd */
+  .dark-mode-toggle > button:focus {
+	outline: none;
+  }
+  
+  .toggle-control {
+	position: relative;
+	padding: 0 4px;
+  }
+
+.w3-bar {
+	margin-top: 32px;
+}
+
+.w3-select,
+.w3-input {
+	background-color: transparent;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.dark-mode .w3-select,
+.dark-mode .w3-input {
+	background-color: #121212;
+	color: #666;
+}
+.dark-mode .w3-select:focus,
+.dark-mode .w3-input:focus {
+	color: #dfdfdf;
+}
+
+.w3-select:disabled,
+.w3-input:disabled {
+	color: #545454;
+	background-color: #ebebe5;
+}
+
+.dark-mode .w3-select:disabled,
+.dark-mode .w3-input:disabled {
+	color: #000;
+	background-color: #666;
+}
+
+.dark-mode .w3-blue {
+	background-color: #0072c4 !important;
+	color: #ddd !important;
+}

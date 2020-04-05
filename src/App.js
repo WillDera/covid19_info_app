@@ -54,7 +54,6 @@ class App extends React.Component {
 			date: date,
 			time: time,
 		});
-		console.log(time);
 	}
 
 	async getCountryData() {
@@ -110,7 +109,7 @@ class App extends React.Component {
 							fontFamily: "Lobster",
 						}}
 					>
-						<h1>WorldWid</h1>
+						<h1>WorldWide</h1>
 					</div>
 					<div className="row" style={{ margin: "10px" }}>
 						<div className="col-md-6 col-xl-4">
