@@ -12,13 +12,15 @@ class ConfirmedCount extends React.Component {
 								class="widget-heading"
 								style={{ fontWeight: "500", color: "#ffb85c" }}
 							>
-								Confirmed Casess
+								Confirmed Cases
 							</div>
-							<div class="widget-subheading">Last year expenses</div>
+							<div class="widget-subheading">
+								Last Update: {this.props.date} <br /> Time: {this.props.time}
+							</div>
 						</div>
 						<div class="widget-content-right">
 							<div class="widget-numbers text-warning">
-								<CountUp start={0} end={this.props.number} duration={8} />
+								<CountUp start={0} end={this.props.number} duration={5} />
 							</div>
 						</div>
 					</div>

@@ -14,11 +14,13 @@ class RecoveredCount extends React.Component {
 							>
 								Recovered
 							</div>
-							<div class="widget-subheading">People Interested</div>
+							<div class="widget-subheading">
+								Last Update: {this.props.date} <br /> Time: {this.props.time}
+							</div>
 						</div>
 						<div class="widget-content-right">
 							<div class="widget-numbers text-success">
-								<CountUp start={0} end={this.props.number} duration={8} />
+								<CountUp start={0} end={this.props.number} duration={5} />
 							</div>
 						</div>
 					</div>
