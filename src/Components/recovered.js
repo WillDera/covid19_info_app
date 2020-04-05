@@ -15,7 +15,7 @@ class RecoveredCount extends React.Component {
 								Recovered
 							</div>
 							<div class="widget-subheading">
-								Last Update: {this.props.date} <br /> Time: {this.props.time}
+								Last Update: {this.props.date} <br />Update Time: {this.props.time}
 							</div>
 						</div>
 						<div class="widget-content-right">
