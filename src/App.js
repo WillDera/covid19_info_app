@@ -26,6 +26,7 @@ class App extends React.Component {
 			country: "",
 			date: "",
 			time: "",
+			theme: 10000
 		};
 
 		this.getCountryData = this.getCountryData.bind(this);
